@@ -1,0 +1,44 @@
+/**************
+ * Scrollbars *
+ **************/
+
+.scrollbar {
+
+    -GtkRange-slider-width:     6;
+    -GtkRange-stepper-size:     0;
+    -GtkRange-stepper-spacing:   1;
+    -GtkRange-trough-border:    1;
+    
+    -GtkScrollbar-min-slider-length: 30;
+}
+
+.scrollbar.trough {
+    background-image: none;
+    background-color: shade (@theme_bg_color, 5.0);
+    border-width:      0;
+    border-radius:      0;
+}
+
+.scrollbar.slider,
+.scrollbar.button {
+    border-width:              0;
+    background-color:         alpha (#000, 0.2);
+
+    border-radius:              10;
+}
+
+
+.scrollbar.slider:prelight {;
+    background-color: alpha (#000, 0.4);
+}
+
+.scrollbar.slider:insensitive {
+    background-image: none;
+    background-color: shade (@theme_bg_color, 5.0);
+    -GtkRange-slider-width: 0;
+}
+
+.scrollbar.trough:insensitive {
+    -GtkRange-trough-border: 0;
+}
+
